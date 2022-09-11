@@ -1,0 +1,29 @@
+{% extends 'main.html'%}
+{% block content %}
+<div class="container">
+    
+  <div class="row">
+    
+    <div class="col topic-components">
+    
+        {% include 'app1/topic.html' %}
+
+      </div>
+      <div class="col task-components">
+        <div>
+        
+        {{room_count}}
+        <a class="btn" href="{% url 'create-task' %}" style="margin-left:55rem;">
+       
+          Create task
+        </a>
+      </div>
+      <hr>
+        {% include 'app1/task.html' %}
+
+      </div>
+
+    
+  </div>
+</div>
+{% endblock content %}  

@@ -1,0 +1,12 @@
+
+
+{% for tk in tasks %}
+{% if request.user == tk.user %}
+<li class="task">
+<a href="{% url 'home' %}"> {{tk.task}} </a>
+<span class="topic"> {{tk.topic}} </span>
+
+</li>
+<span class="btn"><a href="{% url 'delete' tk.id %}">Delete</a></span>
+{% endif %}
+{% endfor %}

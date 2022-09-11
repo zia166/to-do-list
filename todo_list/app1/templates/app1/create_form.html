@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<div class="form__box">
+    <form class="form" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form__group">
+            <label class="auth__tagline">{{field.label}}</label>
+            {{field}}
+          </div>
+          {% endfor %}
+          <button class="btn" type="submit">
+          Submit
+          </button>
+    </form>
+</div>
+{% endblock content %}

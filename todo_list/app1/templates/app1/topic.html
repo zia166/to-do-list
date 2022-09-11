@@ -1,0 +1,15 @@
+
+ <div class="topics__header">
+    <h2>Topics</h2>
+  </div>
+
+
+{% for topic in topics %}
+<ul class="topics__list">
+    <li>
+    
+     <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}} 
+    </a>
+    </li>
+</ul>
+{% endfor %}

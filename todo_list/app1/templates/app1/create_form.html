@@ -1,3 +1,4 @@
+<!-- Registeration form  -->
 {% extends 'main.html' %}
 
 
@@ -6,12 +7,22 @@
 <div class="form__box">
     <form class="form" method="POST">
         {% csrf_token %}
-        {% for field in form %}
         <div class="form__group">
-            <label class="auth__tagline">{{field.label}}</label>
-            {{field}}
+            <label for="room_topic">Enter a Topic:</label>
+            <input required type="text" value="{{task.topics.name}}" name="topic" list="topic-list"/>
+            <datalist id ="topic-list">
+              <select id="room_topic">
+                {% for topic in topics %}
+                <option value="{{topic.name}}">{{topic.name}}</option>
+                {% endfor %}
+              </select>
+            </datalist>
+            
           </div>
-          {% endfor %}
+          <div class="form__group">
+            <label for="room_name">Task:</label>
+            {{form.task}}
+          </div>
           <button class="btn" type="submit">
           Submit
           </button>

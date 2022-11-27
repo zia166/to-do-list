@@ -5,11 +5,17 @@
 
 
 {% for topic in topics %}
+
 <ul class="topics__list">
+    
+  
     <li>
     
-     <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}} 
+     <a href="{% url 'profile' user.id %}?q={{topic.name}}">{{topic.name}} 
+     
     </a>
     </li>
+  
 </ul>
+
 {% endfor %}

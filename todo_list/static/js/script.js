@@ -8,6 +8,12 @@ if (dropdownButton) {
   });
 }
 
-// Scroll to Bottom
-const conversationThread = document.querySelector(".room__box");
-if (conversationThread) conversationThread.scrollTop = conversationThread.scrollHeight;
+      
+var v=document.getElementsByClassName("btn")
+for(i=0;i<v.length;i++){
+  v[i].addEventListener('click',function(){
+    var btnid=this.dataset.btnid
+    
+
+    console.log('btnid:' ,btnid)
+  })}

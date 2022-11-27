@@ -1,11 +1,8 @@
-
-
-
 {% load static %}
 <header class="header header--loggedIn">
    <div class="container row">
       <div class="col">
-       <a href="{% url 'home' %}" class="header_logo">
+       <a href="{% url 'profile' user.id %}" class="header_logo">
          <img src="{% static 'images/logo.png' %}" />
          <h1>To do list</h1>
        </a>
@@ -36,7 +33,7 @@
           {% else %}
          <!-- Not Logged In -->
          <a href="{% url 'login' %}">
-          <!-- <img src="{% static 'images/avatar.svg'%}" /> -->
+       
           <p class="log">Login</p>
          </a>
         {% endif %}

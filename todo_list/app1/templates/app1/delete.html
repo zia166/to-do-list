@@ -5,11 +5,13 @@
 <form class="form__box" method="POST">
     {% csrf_token %}
     <div class="form__group">
-        <p>Are you sure you want to delete "{{obj}}"?</p>
-    </div>
-    <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
-    <div >
-        <input class="btn" type="submit" value="Confirm" />
+        <p>Are you sure you want to delete "{{obj}}"?</p><a  href="{{request.META.HTTP_REFERER}}">
+            Go Back</a>
+       <div style="margin:100px;padding: 0;">
+        
+             <input class="btn" type="submit" value="Confirm"/>
+       </div>
+     
     </div>
 
 </form>

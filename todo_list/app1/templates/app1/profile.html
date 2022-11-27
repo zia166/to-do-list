@@ -1,11 +1,11 @@
 {% extends 'main.html'%}
 {% block content %}
-
+{% load static %}
 <div class="container">
   
   <div class="row">
     <h4 class="auth__tagline"> hello {{user.username}} !!</h4>
-      <span> {{task_count}} tasks  are left to complete !!!</span>
+      <span> {{task_count}} tasks are left to complete !!!</span>
        <hr>
     
     <div class="col topic-components">
